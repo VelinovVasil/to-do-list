@@ -25,7 +25,7 @@ public class NoteController {
     }
 
     @GetMapping
-    public Collection<Note> selectAllUsersByUserID(@RequestBody UUID userID) {
+    public Collection<Note> selectAllNotesByUserID(@RequestParam UUID userID) {
         return this.noteService.getAllNotesByUserID(userID);
     }
 }
